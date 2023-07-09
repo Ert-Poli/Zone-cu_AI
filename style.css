@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    width: 450px;
-    height: 450px;
+    width: 600px;
+    height: 600px;
     margin: 0 auto;
 }
 
@@ -16,9 +16,9 @@
 }
 
 .circle {
-    width: 80%;
-    height: 80%;
-    margin: 10%;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
     background-color: black;
     border-radius: 50%;
 }
@@ -49,16 +49,22 @@
 }
 
 @keyframes blink {
-    0% {background-color: #f2f2f2;}
-    50% {background-color: blue;}
-    100% {background-color: #f2f2f2;}
-  }
-  
-  .circle.blue {
-      animation: blink 1s linear infinite;
-  }
-  
-  #randomize-container {
+    0% {
+        background-color: #f2f2f2;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: #f2f2f2;
+    }
+}
+
+.circle.blue {
+    animation: blink 1s linear infinite;
+}
+
+#randomize-container {
     text-align: center;
     margin-top: 20px;
 }
@@ -67,7 +73,6 @@
     font-size: 24px;
     padding: 10px 20px;
 }
-
 
 #player-energy {
     position: absolute;
@@ -80,8 +85,8 @@
     position: absolute;
     top: 40px;
     right: 10px;
-    width: 20px;
-    height: 100px;
+    width: 30px;
+    height: 120px;
     border: 1px solid #000;
     background-color: #fff;
 }
@@ -111,6 +116,7 @@
         background-color: #f2f2f2;
     }
 }
+
 
 
 /* Stiluri pentru pagina cu regulile jocului */
