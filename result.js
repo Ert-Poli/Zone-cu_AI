@@ -5,6 +5,7 @@ window.onload = function() {
 
     // Adauga functionalitatea butonului "Joaca din nou"
     document.getElementById('play-again-button').addEventListener('click', function() {
-        window.location.href = 'introducere.html';  // Inlocuieste cu numele fisierului tau HTML
+        window.location.href = 'https://ert-poli.github.io/Zone-cu_AI/joc.html';  
     });
 };
+

@@ -326,3 +326,35 @@ function computerInterruptCommunication(circle1, circle2) {
   }
 }
 
+// Ascultători pentru evenimentele 'mousedown' și 'mouseup'
+boardElement.addEventListener('mousedown', handleMouseDown);
+boardElement.addEventListener('mouseup', handleMouseUp);
+
+// Ascultători pentru evenimentele 'touchstart' și 'touchend'
+boardElement.addEventListener('touchstart', handleMouseDown);
+boardElement.addEventListener('touchend', handleMouseUp);
+
+function handleMouseDown(e) {
+    if (!gameEnded && e.target.classList.contains('circle') && energyPlayer > 0) {
+        initialCircle = e.target;
+        e.preventDefault();  // Previne comportamentul default al browserului pentru evenimentele de touch
+    }
+}
+
+function handleMouseUp(e) {
+    if (!gameEnded && e.target.classList.contains('circle') && energyPlayer >= 5) {
+        finalCircle = e.target;
+
+        // Verificăm dacă cercurile sunt adiacente
+        if (areAdjacentCircles(initialCircle, finalCircle)) {
+            // Începem procesul de 'comunicare'
+            energyPlayer -= 5;
+            document.getElementById('player-energy').textContent = `Energie: ${energyPlayer}`;
+            if (!initialCircle.classList.contains('blue')) {
+              startCommunicationProcess(initialCircle, finalCircle);
+            }
+        }
+
+        e.preventDefault();  // Previne comportamentul default al browserului pentru evenimentele de touch
+    }
+}
