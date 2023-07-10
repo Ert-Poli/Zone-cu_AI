@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introducere Joc</title>
+    <title>Introducere Joc Zone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="reguli">
     <div class="container">
-        <h1>Bine ai venit la joc!</h1>
-        <h2>Reguli:</h2>
-        <p>Aici pune regulile jocului...</p>
-        <button id="play-button">Joacă</button>
+        <h1>Bine ai venit la jocul Zone!</h1>
+
+        <h2>Reguli</h2>
+        <button id="rules-button" class="rules-button" onClick="window.location.href='reguli.html';" style="font-size: 1.2em; padding: 10px;">Vizualizează regulile</button> <!-- Butonul care direcționează către pagina cu reguli -->
+
+        <h2>Selectează dificultatea:</h2>
+        <button id="easy-button" class="difficulty-button">Easy</button>
+        <button id="medium-button" class="difficulty-button">Medium</button>
+        <button id="hard-button" class="difficulty-button">Hard</button>
+
     </div>
     <script src="intro.js"></script>
 </body>
 </html>
+
+
 
 
 

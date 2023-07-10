@@ -1,9 +1,10 @@
+/* Stiluri pentru pagina cu tabla */
 #board {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     margin: 0 auto;
 }
 
@@ -16,9 +17,9 @@
 }
 
 .circle {
-    width: 90%;
-    height: 90%;
-    margin: 5%;
+    width: 90%; /* Reduced width from 95% to 90% */
+    height: 90%; /* Increased height to 100% */
+    margin: 5%; /* Adjusted margin to 5% */
     background-color: black;
     border-radius: 50%;
 }
@@ -35,17 +36,17 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    font-size: 18px;
+    font-size: 28px; /* Increased font size from 22px to 28px */
 }
 
 #result {
-    font-size: 24px;
+    font-size: 36px; /* Increased font size from 30px to 36px */
     font-weight: bold;
     margin-top: 20px;
 }
 
 .circle.violet {
-    background-color: violet;
+    background-color: rgb(108, 7, 108);
 }
 
 @keyframes blink {
@@ -66,27 +67,27 @@
 
 #randomize-container {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px; /* Increased margin from 25px to 30px */
 }
 
 #randomize-button {
-    font-size: 24px;
-    padding: 10px 20px;
+    font-size: 36px; /* Increased font size from 30px to 36px */
+    padding: 20px 30px; /* Increased padding from 15px 25px to 20px 30px */
 }
 
 #player-energy {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 18px;
+    font-size: 28px; /* Increased font size from 22px to 28px */
 }
 
 #energy-bar-container {
     position: absolute;
-    top: 40px;
+    top: 50px; /* Increased top from 45px to 50px */
     right: 10px;
-    width: 30px;
-    height: 120px;
+    width: 40px; /* Increased width from 35px to 40px */
+    height: 200px; /* Increased height from 150px to 200px */
     border: 1px solid #000;
     background-color: #fff;
 }
@@ -100,7 +101,7 @@
     bottom: 0;
 }
 
-/* Adaugă stiluri pentru cercul maro */
+/* Adaugă stiluri pentru cercul galben */
 .circle.yellow {
     animation: blink-yellow 1s linear infinite;
 }
@@ -118,19 +119,18 @@
 }
 
 
-
 /* Stiluri pentru pagina cu regulile jocului */
 body.reguli {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh; /* folosește înălțimea completă a viewport-ului */
+    height: 100vh;
     padding: 20px;
 }
 
 .container {
-    width: 100%; /* ocupă toată lățimea disponibilă */
+    width: 100%;
 }
 
 h1 {
@@ -143,10 +143,28 @@ p {
     margin-bottom: 30px;
 }
 
-#play-button {
+.difficulty-button {
     font-size: 18px;
     padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
 }
+
+#easy-button {
+    background-color: green;
+    color: white;
+}
+
+#medium-button {
+    background-color: yellow;
+    color: black;
+}
+
+#hard-button {
+    background-color: red;
+    color: white;
+}
+
 
 
 
@@ -181,4 +199,8 @@ h1 {
 
 #play-again-button:hover {
     background-color: #0056b3;
+}
+
+.circle.gray {
+    background-color: gray;
 }
